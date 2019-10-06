@@ -1,4 +1,7 @@
 const mysql = require('mysql');
+var path = require('path');
+
+var public = path.join(__dirname, '/../', 'public');
 
 var con = mysql.createConnection({
   host: 'localhost',

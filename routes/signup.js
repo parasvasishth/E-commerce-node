@@ -1,4 +1,6 @@
-var path = require('path')
+var path = require('path');
+
+var public = path.join(__dirname, '/../', 'public');
 // const con = require('./connection')
 
 const mysql = require("mysql")
@@ -16,7 +18,8 @@ con.connect(function (err) {
 // var public = require('../public')
 exports.signup = function (req, res) {
   // ask sir to get the public html in js in short path
-  res.sendFile('/home/batman/WebstormProjects/opps/node/e-com_assinment/public/signup.html');
+  res.sendFile(path.join(public, 'signup.html'));
+  // res.sendFile('/home/batman/WebstormProjects/opps/node/e-com_assinment/public/signup.html');
   // res.render('signup')
 }
 

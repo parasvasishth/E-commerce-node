@@ -2,6 +2,9 @@
 // edit product
 // delete product
 // detail view
+var path = require('path');
+
+var public = path.join(__dirname, '/../', 'public');
 
 // this is the connection with database 
 const mysql = require('mysql');
@@ -20,7 +23,8 @@ con.connect(function (err) {
 // this funcation add product with html file
 exports.add_product = function (req, res) {
   // res.render('add_products')
-  res.sendFile('/home/batman/WebstormProjects/opps/node/e-com_assinment/public/add_product.html');
+  res.sendFile(path.join(public, 'add_product.html'));
+  // res.sendFile('/home/batman/WebstormProjects/opps/node/e-com_assinment/public/add_product.html');
 };
 
 // this method add product details in database
