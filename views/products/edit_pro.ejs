@@ -1,0 +1,12 @@
+<form action="/product-updated" method="post" enctype=multipart/form-data> <input type="hidden" name="Pid"
+  value="<%=data[0].Pid%>">
+  Product Name<input type="text" name="pname" value="<%=data[0].Pname%>" id="pname"><br>
+  Quantity <input type="text" name="qty" value="<%=data[0].qty%>" id="qty"><br>
+  SKU <input type="text" name="sku" value="<%=data[0].sku%>" id="sku"><br>
+  Description <input type="text" name="descrp" value="<%=data[0].description%>" id="descrp"><br>
+  price <input type="text" name="price" value="<%=data[0].price%>" id="price"><br>
+  category <input type="text" name="category" value="<%=data[0].category%>" id="category"><br>
+  <input type="file" name="file" multiple required>
+  <p>photo is not comming from database need to fix this bug we need to choise the picture everytime</p>
+  <button type="submit">Click me!</button>
+</form>

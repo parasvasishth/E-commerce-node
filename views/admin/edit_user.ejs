@@ -1,0 +1,14 @@
+<form action="/edited-user" method="post" enctype=multipart/form-data> <input type="text" name="userId"
+  value="<%= data[0].userId%>">
+  Username<input type="text" name="username" value="<%=data[0].username%>" id="username"><br>
+  Password <input type="text" name="password" value="<%=data[0].password%>" id="password"><br>
+  Address<input type="text" name="adress" value="<%=data[0].address%>" id="address"><br>
+  city <input type="text" name="city" value="<%=data[0].city%>" id="city"><br>
+  email <input type="text" name="email" value="<%=data[0].email%>" id="email"><br>
+  contact <input type="text" name="contact" value="<%=data[0].contact%>" id="contact"><br>
+  gender <input type="text" name="gender" value="<%=data[0].gender%>" id="gender"><br>
+  type <input type="text" name="type" value="<%=data[0].type%>" id="type"><br>
+  <input type="file" name="file" multiple required>
+  <p>photo is not comming from database need to fix this bug we need to choise the picture everytime</p>
+  <button type="submit">Click me!</button>
+</form>

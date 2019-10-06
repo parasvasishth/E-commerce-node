@@ -1,0 +1,33 @@
+<table border="1" cellpadding="7" cellspacing="7">
+  <tr>
+    <th>No.</th>
+    <th>Username</th>
+    <th>password</th>
+    <th>address</th>
+    <th>city</th>
+    <th>email</th>
+    <th>contact</th>
+    <th>gender</th>
+    <th>type</th>
+    <th>Photo</th>
+  </tr>
+  <% if (data.length) {
+                for (let index = 0; index < data.length; index++) { %>
+  <tr>
+    <td><%= (index+1)%></td>
+    <td><%= data[index].username %></td>
+    <td><%= data[index].password %></td>
+    <td><%= data[index].address %></td>
+    <td><%= data[index].city %></td>
+    <td><%= data[index].email %></td>
+    <td><%= data[index].contact %></td>
+    <td><%= data[index].gender %></td>
+    <td><%= data[index].type %></td>
+    <td><img src="/../uploads/<%= data[index].image%>" width=100px height=100px></td>
+  </tr>
+  <% } 
+         
+          } else { 
+        
+          } %>
+</table>

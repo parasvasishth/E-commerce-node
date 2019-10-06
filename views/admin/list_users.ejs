@@ -1,0 +1,38 @@
+<button><a href="/signup">Add User/Admin</a></button><br><br>
+<table border="1" cellpadding="7" cellspacing="7">
+  <tr>
+    <th>No.</th>
+    <th>Username</th>
+    <th>password</th>
+    <th>address</th>
+    <th>city</th>
+    <th>email</th>
+    <th>contact</th>
+    <th>gender</th>
+    <th>type</th>
+    <th>Photo</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% if (data.length) {
+                for (let index = 0; index < data.length; index++) { %>
+  <tr>
+    <td><%= (index+1)%></td>
+    <td><a href="/user_detail/<%=data[index].userId%>"><%= data[index].username %></a></td>
+    <td><%= data[index].password %></td>
+    <td><%= data[index].address %></td>
+    <td><%= data[index].city %></td>
+    <td><%= data[index].email %></td>
+    <td><%= data[index].contact %></td>
+    <td><%= data[index].gender %></td>
+    <td><%= data[index].type %></td>
+    <td><img src="/../uploads/<%= data[index].image%>" width=100px height=100px></td>
+    <td><a href="/edit_user/<%= data[index].userId %>">Edit</a></td>
+    <td><a href="/user-deleted/<%= data[index].userId %>">Delete</a></td>
+  </tr>
+  <% } 
+         
+          } else { 
+        
+          } %>
+</table>
